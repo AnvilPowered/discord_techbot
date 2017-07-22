@@ -14,7 +14,6 @@ module.exports = {
         bot.login(config.bot.token).then(() => {
 
             fs.readdirSync(path.join(__dirname, "events")).forEach((name) =>{
-                //bot.on(<nombre del archivo sin extension>, require(nombre del archivo))
                 bot.on(/(.+)\.js/i.exec(name)[1], require(`./events/${name}`));
             });
 
