@@ -6,7 +6,7 @@ module.exports = (message) => {
 
     if(!message.guild) return;
 
-    if(message.channel.name !== 'tech-role-spam') return;
+    if(message.channel.name !== 'tech-role-spam' && message.member.roles.findKey('name', '.') === null) return;
 
     if(!message.content.startsWith(config.prefix)) return;
 
