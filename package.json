@@ -1,0 +1,22 @@
+{
+  "name": "discord_techbot",
+  "version": "1.0.0",
+  "description": "discord tech bot",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pagoru/discord_techbot.git"
+  },
+  "author": "pagoru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pagoru/discord_techbot/issues"
+  },
+  "homepage": "https://github.com/pagoru/discord_techbot#readme",
+  "dependencies": {
+    "discord.js": "^11.1.0"
+  }
+}
