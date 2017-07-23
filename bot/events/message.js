@@ -10,15 +10,12 @@ module.exports = (message) => {
 
     if(!message.content.startsWith(config.prefix)) return;
 
-    //region Hariboe
-        if(message.content.toLowerCase() === `${config.prefix}hariboe`){
-            message.reply('<:hariboepeek:338422524398534667>').then(reply => {
-                message.delete();
-                reply.delete(4000);
-            });
-            return;
-        }
-    //endregion
+    const command_options = message.content.split(' ');
+    const command_name = command_options[0].toLowerCase().replace(config.prefix, '');
+    if(bot_commands.indexOf(command_name) > -1){
+        require(`../commands/${command_name}`).exec(message);
+        return;
+    }
 
     const is_remove_option = message.content.startsWith(`${config.prefix}remove `);
 
