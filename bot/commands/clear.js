@@ -4,6 +4,10 @@
 
 module.exports = {
     name: 'clear',
+    permission: {
+        '291860547039789066': '*',//mod
+        '291860607911723008': '*',//root
+    },
     exec(message){
         message.delete().then(() => {
             delete_messages(message.channel, 1000);
@@ -15,11 +19,7 @@ const max_delete_message = 100;
 const delete_messages = (channel, number) => {
     if(1 >= number) return;
 
-    const current_channel_messages = channel.messages.array().length;
-    if(1 >= current_channel_messages) return;
-
-    let current_delete_number = (max_delete_message > number) ? number : max_delete_message;
-    current_delete_number = (current_delete_number > current_channel_messages) ? current_channel_messages : current_delete_number;
+    const current_delete_number = (max_delete_message > number) ? number : max_delete_message;
 
     channel.bulkDelete(current_delete_number)
         .then(() => delete_messages(channel, number - current_delete_number))
