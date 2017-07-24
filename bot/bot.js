@@ -23,6 +23,8 @@ module.exports = {
                 bot.on(/(.+)\.js/i.exec(name)[1], require(`./events/${name}`));
             });
 
+            bot.user.setGame(global.config.playing_game).catch(console.error);
+
             console.log('The bot is ready to tech!');
 
         }).catch(console.error);
