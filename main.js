@@ -16,7 +16,7 @@ require('./bot/bot').init();
 // global.bot = new Discord.Client();
 //
 // bot.login(global.config.bot.token).then(() => {
-//     bot.channels.get('282042352435200001').fetchMessage('339115406885257217').then(message => {
-//         message.edit(fs.readFileSync(path.join(__dirname, '/messages/server-updates')).toString());
+//     bot.channels.get('339077393077501952').fetchMessage('339774965513715714').then(message => {
+//         message.edit(fs.readFileSync(path.join(__dirname, '/messages/tech-role-help')).toString());
 //     }).catch(console.error);
 // });
