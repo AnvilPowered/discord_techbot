@@ -16,6 +16,7 @@ As you can see we have a bot to help you assign your roles easily, this means wh
 !retro
 !science
 !transport
+!mobile
 ```
 
 2. **Add your role by typing** `!<role-name>` **in the <#339077432449695744> channel.** <:hariboepeek:339080617180266497>
